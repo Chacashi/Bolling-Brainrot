@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [Header("Jugadores")]
+    public GameObject panel1;
+    public GameObject panel2;
     public TextMeshProUGUI turnText;
     public TextMeshProUGUI scoreText;
     private List<string> playerNames = new List<string>();
@@ -128,9 +130,9 @@ public class GameManager : MonoBehaviour
     }
 
     void TerminarPartida()
-    {
-        turnText.gameObject.SetActive(false);
-        scoreText.gameObject.SetActive(false);
+    {   
+        panel1.SetActive(false);
+        panel2.SetActive(false);  
         panelGanador.SetActive(true);
 
         int maxScore = -1;
